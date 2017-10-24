@@ -29,9 +29,9 @@ Extracting all employees to a csv delimited file:
 
     \copy (SELECT * FROM employees) TO '~/employees.csv' WITH (FORMAT CSV);
 
-Extracting all employees to a binary file (note the quotes around the word Binary):
+Extracting all employees to a binary file (note: previous versions of Postgres used "Binary" instead of BINARY):
 
-    \copy (SELECT * FROM employees) TO '~/employees.dat' WITH (FORMAT "Binary");
+    \copy (SELECT * FROM employees) TO '~/employees.dat' WITH (FORMAT BINARY);
 
 And for loading data into a table the equivalent for each of the above:
 
